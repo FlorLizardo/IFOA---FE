@@ -4,6 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Sviluppo di una pagina web - Blog Epicode</title>
+		<meta 
+		name="description" 
+		content="Primi passi operativi per creare un modello di pagina HTML per un post.
+		Scopri come iniziare in modo facile.">
 		<style>
 			table {
 				border: 1px solid black;
@@ -17,27 +21,34 @@
 			}
 		</style>
 	</head>
+
 	<body>
 		<header>
 			<figure>
-				<img src="assets/img/logo.svg" alt="logo-di-epicode" width="80" />
+				<img src="assets/img/logo.svg" alt="logo-di-epicode" width="100" />
 				<figcaption>Epicode - Il blog dei developers</figcaption>
 			</figure>
 
+			<!--Menu-->
 			<nav>
 				<ul>
 					<a href="#"><li>Home</li></a>
 					<a href="#"><li>Articoli</li></a>
 					<a href="#"><li>Lavora con noi</li></a>
 				</ul>
+				&nbsp;
 			</nav>
 		</header>
 
+		<!--Titolo-->
 		<main>
-			<p>&nbsp</p>
-			<h1>Come creare un template per i post</h1>
-			<h2>di Mario Rossi - pubblicato il 25-10-2020</h2>
+			<div>
+				<h1>Come creare un template per i post</h1>
+				<h2>di Mario Rossi - pubblicato il 25-10-2020</h2>
+				<br>
+			</div>
 
+			<!--Contenuto del post-->
 			<section>
 				<p>
 					La prima cosa da fare è suddividere in blocchi logici la pagina,
@@ -82,6 +93,7 @@
 						diffusione pressoché totale.
 					</p>
 
+					<!--Tabella-->
 					<h4>Diffusione dei CSS</h4>
 					<table>
 						<thead>
@@ -125,6 +137,8 @@
 						</tbody>
 					</table>
 					&nbsp;
+
+					<!--Video-->
 					<p>
 						Un test di validazione potrà essere fatto tramite il tool online
 						<a href="#">-LINK ESTERNO- </a> dedicato allo scopo. Una volta ottimizzato
@@ -138,18 +152,20 @@
 						title="YouTube video player"
 						frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen
-					>
+						allowfullscreen >
 					</iframe>
 				</div>
 			</section>
 
 			&nbsp;
+
+			<!--Form-->
 			<section>
 				<h3>
 					Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra
 					newsletter:
 				</h3>
+
 				<form action="action.php" method="post">
 					<label for="email"></label>
 					<input
@@ -159,10 +175,48 @@
 						placeholder="Inserisci l'email"
 						required
 					/>
-
 					<button type="submit" id="invia">Iscriviti!</button>
 				</form>
 			</section>
+			&nbsp;
+
+			<!--Area correlati-->
+			<section>
+				<aside>
+					<hr>
+					<h3>Articoli correlati</h3>
+					<div>
+						<h4>Validare il codice HTML</h4>
+						<p>Categoria: develop <br>
+							Data: 18-9-2020</p>
+					</div>
+
+					<div>
+						<h4>Correggere la sintassi</h4>
+						<p>Categoria: develop <br>
+							Data: 16-9-2020</p>
+					</div>
+
+					<div>
+						<h4>Meno Kb nella pagina</h4>
+						<p>Categoria: ottimizzazione <br>
+							Data: 30-9-2020</p>
+					</div>
+					<hr>
+				</aside>
+			</section>
 		</main>
+
+		&nbsp;
+
+		<!--Copyright e info-->
+		<footer>
+			<p>Blog Epicode ©2023</p>
+			<p>
+				Testata online di Mario Rossi, registrata con prot. n.213/2018
+				 - via Luigi Einaudi 2 - Milano. P.IVA 00112233.
+			</p>
+			<address><a href="#">info@epicode.school</a></address>
+		</footer>
 	</body>
 </html>
