@@ -1,0 +1,66 @@
+body {
+	margin: 0;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+	text-align: center;
+}
+
+#logo {
+	text-align: center;
+	padding: 1rem;
+}
+
+#logo img {
+	width: 15rem;
+}
+
+#sottotitolo {
+	border-top: 1.5px solid #ffd877;
+	color: #004d4c;
+	background-color: #fdfbf1;
+}
+
+main {
+	margin: 0 auto;
+	margin-top: 4rem;
+	width: 50vw;
+}
+
+h1 {
+ font-size: 2rem;
+	text-align: center;
+	padding: 1rem;
+}
+
+figure {
+ margin-left: 0;
+}
+#imgFocaccia {
+	width: 43rem;
+	border-radius: 1rem;
+	box-shadow: 8px 6px 4px #d0d1d2;
+}
+
+figcaption {
+	color: gray;
+	text-align: center;
+	margin: 0.5rem;
+}
+
+#link {
+	color: #b5460f;
+	border-left: 2px solid #ffe4a2;
+	padding: 0.5rem;
+}
+
+a {
+	color: #107777;
+}
+
+.ricettaTitoli {
+ border-bottom: 2px solid #C4F3F2;
+ padding: 1rem 0rem;
+ margin-bottom: .5rem;
+}
