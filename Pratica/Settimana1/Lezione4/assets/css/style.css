@@ -1,27 +1,32 @@
 /* IMPOSTAZIONI GENERALI */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap");
 
 html,
 body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 
 /* HEADER */
-#layoutCompleto {
-  margin: 1rem 3rem;
-}
-
 header {
-	margin: 0 auto;
+	width: 96vw;
+	margin: 0.7rem auto;
 	background: linear-gradient(#00a0c6, #036d86);
-  padding: 1rem;
+	padding: 0.5rem 0 1.2rem;
+	height: 10rem;
+	margin-bottom: 2rem;
+	box-shadow: 0px 6px 7px rgb(57, 57, 57);
 }
 
-figcaption, .list-menu li{
-  color: white;
+figcaption,
+.list-menu li {
+	color: white;
+}
+
+.list-menu li:hover {
+	color: #ff2751;
 }
 
 #logo {
@@ -38,64 +43,146 @@ figcaption, .list-menu li{
 
 .list-menu {
 	list-style: none;
-  margin-block-start: 0px;
-  padding-inline-start: 0px;
-  text-align: center;
+	margin-block-start: 0px;
+	padding-inline-start: 0px;
+	text-align: center;
 }
 
 .list-menu li::before {
-  content: '★';
+	content: "★";
 }
 
 h1 {
-  padding-top: 1.5rem;
+	padding-top: 1.5rem;
 }
 
 .sottotitolo {
-  color: gray;
+	color: gray;
 }
 
-a {
-  text-decoration: none;
+.list-menu a {
+	text-decoration: none;
 }
 /* MAIN */
 #articolo {
-  margin: 0 auto;
-  background: white;
-  padding-left: 1rem;
-
+	margin: 0 auto 2rem;
+	width: 94vw;
+	background: white;
+	padding: 1rem;
+	border: 2px solid #a8a7a7;
+	border-top: none;
+	box-shadow: 0px 6px 7px rgb(57, 57, 57);
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
+.tag {
+	border: 1px solid gray;
+	background-color: #e3e3e3;
+	border-radius: 0.2rem;
+}
+
+.risaltato {
+	color: #a53179;
+}
+
+iframe {
+	width: 90vw;
+	border-radius: 2rem;
+	height: 8rem;
+}
+
+#linkTool {
+	color: #15a7ca;
+}
 
 /* TABELLE */
 
 #titoloTabella {
-  width: 25rem;
-  text-align: center;
+	width: 25rem;
+	text-align: center;
 }
 
 table {
-  border-bottom: .2rem solid #3F6BCA;
-  border-collapse: collapse;
-  width: 25rem;
+	border-bottom: 0.2rem solid #3f6bca;
+	border-collapse: collapse;
+	width: 25rem;
 }
 
 td,
 th {
-  padding: 13px;
+	padding: 13px;
 }
 
-table thead{
-  background-color: #3F6BCA;
+table thead {
+	background-color: #3f6bca;
+	color: white;
 }
 
 table tr:nth-child(even) {
-  background-color: #F3F3F3;
+	background-color: #f3f3f3;
 }
 
 /* FORM */
 
-/* ELEMENTI NELL' ASIDE */
+.titoliSecondari {
+	color: rgb(52, 51, 51);
+	text-align: center;
+	font-weight: 500;
+}
 
+input {
+	background-color: white;
+	border-bottom-style: dashed;
+	padding: 0.2rem;
+}
+#info {
+	background-color: #e8e6e6;
+	padding: 0.5rem;
+	margin: 0.8rem auto;
+	width: 92vw;
+}
+
+button {
+	background-color: #3f6bca;
+	color: white;
+	border: none;
+	padding: 0.2rem;
+}
+
+/* ELEMENTI NELL' ASIDE */
+.aside {
+	background-color: #e8e6e6;
+	border: 1px solid #a8a7a7;
+	margin-bottom: 1.5rem;
+	padding: 0.8rem;
+	width: 92vw;
+	line-height: 0.1rem;
+}
+
+.data {
+	text-align: end;
+}
+
+.aside a {
+	color: #15a7ca;
+}
 /* FOOTER */
+footer {
+	width: 96vw;
+	margin: 0 auto 0.7rem;
+	background: linear-gradient(#06738c, #20353a);
+	color: white;
+	text-align: center;
+}
+
+#footer {
+	padding: 0.1rem 1rem 1rem;
+}
+
+.contatti {
+	display: inline;
+}
+
+address a {
+	color: #df09e6;
+}
