@@ -108,6 +108,10 @@ h2 {
   width: 100%;
 }
 
+.fontPiccola {
+  font-size: .8rem;
+}
+
 /*footer*/
 #footer {
   background-color: #25a2c3;
