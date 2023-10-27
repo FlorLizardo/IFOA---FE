@@ -78,11 +78,31 @@ h1 {
   border-radius: 100%;
 }
 
-#blockquote {
+#testimonianze {
   background-color: #e22d0e;
   color: white;
+  text-align: center;
+  padding: 1rem 2rem;
 }
 
 h3 {
   color: white;
+}
+
+ blockquote{
+  font-style: italic;
+}
+
+#schede{
+  text-align: center;
+}
+
+.schedeSingole {
+  margin: 3rem;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.img-schede {
+  width: 100%;
 }
