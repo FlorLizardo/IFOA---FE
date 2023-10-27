@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300;400;500;700');
+
+/* Generale */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: #393d41;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: #25a2c3;
+  line-height: 1.5;
+}
+
+/*Header*/
+header {
+  background-color: black;
+  height: 5rem;
+  text-align: start;
+}
+
+#logo {
+  margin: 1rem;
+  width: 8.5rem;
+}
+
+/*contenuto*/
+h1 {
+  text-align: center;
+}
+
+.testi {
+  text-align: center;
+}
+
+#introduzione {
+  padding: 5rem 20rem;
+  background-image: url(../images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+}
+
+#button {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#buttonTesto {
+  width: 8rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background: #f04c2f;
+  padding: 1rem;
+  border-radius: .3rem;
+  border: none;
+}
+
+/*section 2*/
+#benefici {
+  padding: 2rem 5rem;
+}
+
+#benefici div {
+  display: inline-block;
+  width: 30rem;
+  vertical-align: middle;
+}
+
+#img-prima-section {
+  padding-right: 3rem;
+  text-align: end;
+}
+
+#lavoraDaCasa {
+  width: 18rem;
+  border-radius: 100%;
+}
+
+#testimonianze {
+  background-color: #e22d0e;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+h2 {
+  color: white;
+}
+
+ blockquote{
+  font-style: italic;
+}
+
+.schedeSingole {
+  margin: 3rem;
+  border: 1px solid black;
+  border: 1px solid #dee1e3;
+  border-radius: .3rem;
+  text-align: center;
+}
+
+.testiSchede {
+  padding: .3rem;
+}
+
+.img-schede {
+  width: 100%;
+}
+
+.fontPiccola {
+  font-size: .8rem;
+}
+
+/*footer*/
+#footer {
+  background-color: #25a2c3;
+  text-align: center;
+  color: white;
+  padding: 3rem;
+}
+ 
+#contatti p a,
+#copyright p a,
+hr {
+  color: white;
+}
+
+hr {
+  width: 12rem;
+}
+
+address a, address p{
+  font-style: normal;
+  color: white;
+}
