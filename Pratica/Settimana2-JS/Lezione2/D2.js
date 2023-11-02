@@ -73,6 +73,13 @@ if (numeroIntero1 === 8 || numeroIntero2 === 8) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 let totalShoppingCart1 = 56;
+//Modifiche in base alla spiegazione del prof.
+let spedizione = 10;
+let totale = totalShoppingCart1;//con questo mettiamo il totale
+if (totalShoppingCart1 < 50) {
+  totale += spedizione;
+}
+console.log('Totale: ' + totale);
 
 if (totalShoppingCart1 > 50) {
   console.log('Totale: ' + totalShoppingCart1 + '. ' + 'La tua spedizione è gratuita.')
@@ -88,7 +95,7 @@ if (totalShoppingCart1 > 50) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 let totalShoppingCart2 = 20;
-let totalConSconto = totalShoppingCart2*(20/100);
+let totalConSconto = totalShoppingCart2*(20/100);//20% = 0.8
 let totaleFinale = totalShoppingCart2 - totalConSconto;
 
 if (totaleFinale > 50) {
@@ -106,20 +113,34 @@ if (totaleFinale > 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let variabile1 = 5;
-let variabile2 = 7;
-let variabile3 = 8;
+//Essercizio realizzato con il professore
+let x1 = 5;
+let x2 = 8;
+let x3 = 8;
 
 
-if ((variabile1 > variabile2 && variabile2 > variabile3)) {
- console.log(variabile1, variabile2,  variabile3)
-} else if (variabile2 > variabile1 && variabile2 > variabile3 && variabile2 > variabile3) {
-  console.log(variabile2, variabile1,  variabile3)
-}else if (variabile3 > variabile1 && variabile2 > variabile1) {
-  console.log(variabile3,  variabile2,  variabile1)
-}else {
-  console.log('veamos si funciona')
+if (x1 >= x2) {
+	if (x3 >= x1) {
+		console.log(x3, x1, x2);
+	} else {
+		if (x3 >= x2) {
+			console.log(x1, x3, x2);
+		} else {
+			console.log(x1, x2, x3);
+		}
+	}
+} else {
+	if (x3 >= x2) {
+		console.log(x3, x2, x1);
+	} else {
+		if (x3 >= x1) {
+			console.log(x2, x3, x1);
+		} else {
+			console.log(x2, x1, x3);
+		}
+	}
 }
+
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -129,7 +150,12 @@ if ((variabile1 > variabile2 && variabile2 > variabile3)) {
 
 let tipoNumero = 8;
 
-console.log(typeof(tipoNumero));
+if (typeof tipoNumero === 'number') {
+  
+  console.log('è un numero');
+}else {
+  console.log('non è un numero');
+}
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
@@ -179,13 +205,13 @@ const me = {
 }
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-  const me2 = {...me}
-  me2.city = 'Toronto';
+  me.city = 'Toronto';
 
-  console.log(me2.name);
-  console.log(me2.lastName);
-  console.log(me2.skills[0]);
-  console.log(me2.city);
+  console.log(me);
+  console.log(me.name);
+  console.log(me.lastName);
+  console.log(me.skills[0]);
+  console.log(me.city);
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
@@ -193,26 +219,42 @@ const me = {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-delete me2.lastName;
-console.log(me2.lastName);
+delete me.lastName;
+console.log(me.lastName);
 
-/* ESERCIZIO 13 NON FARE
+/* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-delete me2.skills[2];
-console.log(me2.skills[2]);
+delete me.skills[2];
+console.log(me.skills[2]);
 
-/* ESERCIZIO 14 NON FARE
+/* ESERCIZIO 14 
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const arrayNuovo = [];
+arrayNuovo[0] = 1;
+arrayNuovo[1] = 2;
+arrayNuovo[2] = 3;
+arrayNuovo[3] = 4;
+arrayNuovo[4] = 5;
+arrayNuovo[5] = 6;
+arrayNuovo[6] = 7;
+arrayNuovo[7] = 8;
+arrayNuovo[8] = 9;
+arrayNuovo[9] = 10;
+
+console.log(arrayNuovo);
 
 /* ESERCIZIO 15 NON FARE
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+arrayNuovo[9] = 100;
+console.log(arrayNuovo);
