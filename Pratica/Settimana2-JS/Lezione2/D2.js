@@ -95,7 +95,7 @@ if (totalShoppingCart1 > 50) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 let totalShoppingCart2 = 20;
-let totalConSconto = totalShoppingCart2*(20/100);//20% = 0.8
+let totalConSconto = totalShoppingCart2*(20/100);//oppure direttamente 80% = 0.8
 let totaleFinale = totalShoppingCart2 - totalConSconto;
 
 if (totaleFinale > 50) {
@@ -113,7 +113,7 @@ if (totaleFinale > 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-//Essercizio realizzato con il professore
+//Essercizio eseguito con il professore
 let x1 = 5;
 let x2 = 8;
 let x3 = 8;
@@ -147,6 +147,7 @@ if (x1 >= x2) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+//Esercizio eseguito con il professore
 
 let tipoNumero = 8;
 
