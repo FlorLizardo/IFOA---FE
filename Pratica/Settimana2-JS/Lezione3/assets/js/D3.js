@@ -254,5 +254,24 @@ console.log(characters);
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+//soluzione della piattaforma
 
+const random = Math.floor(Math.random() * starWarsCharacters.length);
+const selectedCharacter = starWarsCharacters[random];
+
+console.log("Il nome del personaggio è:", selectedCharacter.name);
+
+if (selectedCharacter.gender === "female") {
+  console.log("Lei è alta", selectedCharacter.height, "cm,");
+} else {
+  console.log("Lui è alto", selectedCharacter.height, "cm,");
+}
+
+if (selectedCharacter.hair_color !== "n/a" && selectedCharacter.hair_color !== "none") {
+  console.log("ha dei capelli ", selectedCharacter.hair_color);
+} else {
+  console.log("non ha dei capelli");
+}
+
+console.log("e ha la pelle", selectedCharacter.skin_color);
 
