@@ -1,1 +1,142 @@
 /* Your styles here */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #E8EEEE;
+}
+
+/*Header*/
+
+#headLogo {
+  background-color: #222F3F;
+}
+
+#logo {
+  margin-left: 1.3rem;
+  width: 7rem;
+  padding: .7rem;
+}
+
+#nav {
+  margin: -1rem;
+  background-color: #364759;
+  height: 6vh;
+}
+
+#lista {
+  margin-left: 1.6rem;
+  padding: .8rem;
+}
+
+.link-nav {
+  font-size: 1rem;
+  list-style: none;
+  display: inline;
+  margin-left: .7rem;
+  color: white;
+}
+
+/*Main
+/*Titolo principale*/
+
+main{
+  width: 96vw;
+  margin: 0 auto;
+}
+
+#title {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#titleArancio {
+  background-color: #F46604;
+  height: 2rem;
+}
+
+#titleArancio p {
+  padding-top: .5rem;
+}
+
+h1, h2, #titleArancio p {
+  color: white;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+h1 {
+  padding-top: 3rem;
+}
+
+
+#titleVerde {
+  background-image: url('../images/bg-image.png');
+  height: 23vh;
+  margin-top: 2rem;
+}
+
+/*Section 1 prodotti*/
+
+#containerGift {
+  background-color: white;
+  height: 70vh;
+  margin-bottom: 3rem;
+}
+
+#containerGift div h4 {
+  padding: 1.3rem;
+}
+
+span {
+  color: #2999a8;
+}
+
+.imgSchede {
+  display: inline;
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+.imgGift {
+  width: 19rem;
+  height: 23rem;
+  border-radius: 1.5rem;
+  box-shadow: 7px 6px 5px rgb(206, 205, 205);
+}
+
+/*Section 2 Prodotti*/
+
+.imgShop {
+  width: 96vw;
+}
+
+.shop h4 {
+  text-align: center;
+}
+
+/*Footer*/
+
+#backTop {
+  text-align: center;
+  background-color: #364759;
+  padding: 1rem;
+}
+#backTop a {
+  color: white;
+}
+
+#ContainerLogoFooter {
+  background-color: #222F3F;
+  padding: 3.5rem;
+  text-align: center;
+}
+
+#logoFooter {
+  width: 10rem;
+}
+
+
