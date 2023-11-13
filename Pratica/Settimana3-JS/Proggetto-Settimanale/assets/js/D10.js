@@ -504,27 +504,56 @@ console.log(removeIndex(movies, 1));
 */
 
 function selezionare () {
-  
+  let selezionato = document.getElementById('container');
+  return selezionato;
 }
 
 console.log('Esercizio 20');
-console.log();
+console.log(selezionare());
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
+function td() {
+  return document.querySelectorAll('td');
+}
+
+console.log('Esercizio 21');
+console.log(td());
+
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+
+function stampa() {
+  let td = document.querySelectorAll('td');
+  for (var i = 0; i < td.length; i++) {
+    console.log(td[i].innerText);
+  }
+}
+
+console.log('Esercizio 22');
+console.log(stampa());
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+function link() {
+  let link = document.getElementsByTagName('a');
+  for(let i = 0; i < link.length; i++) {
+    link[i].style.backgroundColor = 'red';
+  }
+}
+
+link();
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+
+
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
