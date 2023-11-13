@@ -55,7 +55,7 @@ const numeriArray = [2, 4, 6, 7];
 
 const somma = (arr) => {
   let totale = 0;
-   arr.forEach(function(el) {
+   arr.forEach((el) => {
     totale += el;
   });
   return totale;
@@ -290,22 +290,15 @@ console.log(titoli(movies));
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
-/*const pari = (array) => {
-  return array.filter((el) => el % 2 === 0)
-}*/
 
-const filmMilenio = (arr) => {return arr.filter((el) => el.Year > 2000)}
+const filmMillennio = (arr) => {return arr.filter((el) => parseInt(el.Year) > 2000)}
 
 console.log('Esercizio 12: ');
-console.log(filmMilenio(movies));
+console.log(filmMillennio(movies));
 
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
-
-/*const totaleLista = (arr) => {
-  return arr.reduce((totale, el) => totale + el, 0)
-}*/
 
 const sommaFilm = (arr) => {
   return arr.reduce((totale, el) => totale + parseInt(el.Year), 0)
@@ -318,28 +311,20 @@ console.log(sommaFilm(movies));
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 
-const specificoFilm = (imdbID) => {
-  const film = movies.find((el) => el.imdbID === imdbID);
-
-  if(film) {
-    return film;
-  }else {
-    return 'Film non trovato';
-  }
+const specificoFilm = (arr, id) => {
+  return arr.find((el) => el.imdbID === id);
 }
 
 console.log('Esercizio 14: ');
-console.log(specificoFilm('tt1731697'));
+console.log(specificoFilm(movies, 'tt1731697'));
 
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
 
-const indiceFilm = (anno) => {
-  const index = movies.findIndex((el) => parseInt(el.Year) === anno);
-
-  return index;
+const indiceFilm = (arr, anno) => {
+  return arr.findIndex((el) => parseInt(el.Year) === anno);
 }
 
 console.log('Esercizio 15. L\'indice è: ');
-console.log(indiceFilm(2012));
+console.log(indiceFilm(movies, 2012));

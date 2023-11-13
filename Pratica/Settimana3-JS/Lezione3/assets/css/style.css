@@ -1,0 +1,22 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2, h3 {
+  color: blueviolet;
+}
+
+.button {
+  margin-left: 30px;
+}
+
+.lista {
+  line-height: 3em;;
+}
+
+.barrato {
+  text-decoration: line-through;
+}
