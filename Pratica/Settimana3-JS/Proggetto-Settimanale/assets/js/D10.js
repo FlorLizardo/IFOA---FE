@@ -553,11 +553,27 @@ link();
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+function aggiungere() {
+  let lista = document.getElementById('myList');
+  let elemento = document.createElement('li');
+  elemento.innerText = 'Nuovo Elemento';
 
+  lista.appendChild(elemento);
+}
+
+aggiungere();
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+
+function eliminare() {
+  let eliminata = document.getElementById('myList');
+  eliminata.innerText = '';
+}
+
+//eliminare();
+
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
