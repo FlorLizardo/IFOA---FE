@@ -579,6 +579,15 @@ function eliminare() {
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
+function tr() {
+  let tr = document.getElementsByTagName('tr');
+  for(let i = 0; i < tr.length; i++) {
+    tr[i].classList.add('test');
+  }
+}
+
+tr();
+
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
