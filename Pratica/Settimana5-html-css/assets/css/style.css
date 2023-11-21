@@ -179,6 +179,24 @@ footer a {
     color: fuchsia;
 }
 
+/* Stampa*/
+@media print { 
+    body, h1 {
+        border: none;
+        font-size: .9rem;
+    }
+    header, footer, iframe, aside, section{
+        display: none;
+    }
+    main , article{
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+}
 
 /* Layout Small*/
 @media screen and (min-width: 576px){
