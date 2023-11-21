@@ -142,7 +142,7 @@ function onlyLetters(str) {
 
 
 console.log('Esercizio 5: ',);
-console.log(onlyLetters("I have 4 dogs"));
+console.log(onlyLetters("I have 4 dogs and 5 cats"));
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
@@ -602,6 +602,24 @@ tr();
 
 */
 
+function halfTree(num) {
+  for(let i = 0; i < num; i++) {
+    return '*'
+  }
+}
+
+console.log(halfTree(4));
+
+
+// for(let i = 0; i < num; i++) {
+//   let dado = dice();
+//   lancio.sum += dado;
+//   lancio.values.push(dado);
+// }
+// return lancio;
+// }
+
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -617,4 +635,20 @@ tr();
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+function isItPrime (num) {
+  if(num <= 1){
+    return false;
+  }
+  for(let i = 1; i < num; i++) {
+    if(num % i === 0) {
+      return false;
+    }else{
+      return true;
+    }
+  }
+}
+
+console.log('Esercizio 29')
+console.log(isItPrime(15));
 
