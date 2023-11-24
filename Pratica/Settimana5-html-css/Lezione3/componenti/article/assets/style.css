@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70vw;
+  padding: 2rem .5rem;
+  color: #612406;
+  background-color: #FBF7E3;
+  border-radius: 2rem;
+}
+
+.imgArticle img{
+  width: 30rem;
+}
+
+.testoArticle {
+  width: 30rem;
+}

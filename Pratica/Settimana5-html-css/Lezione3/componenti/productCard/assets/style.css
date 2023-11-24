@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #FFFFFF;
+  padding: 1rem;
+}
+
+.card {
+  width: 22rem;
+  height: 32rem;
+  color: #612406;
+  background-color: #FBF7E3;
+  border-radius: 6.4rem;
+}
+
+.imgCard {
+  background-image: url('/Lezione3/assets/imgs/honey.jpg');
+  background-size:cover;
+  background-position: center;
+  width: 22rem;
+  height: 20rem;
+  border-top-right-radius: 6.4rem;
+  border-top-left-radius: 6.4rem;
+}
+
+.testiCard {
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ margin-top: 1rem;
+}
+
+.titoloCard {
+  line-height: .5rem;
+  text-align: center;
+}
+
+.titolo{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sottotitolo {
+  font-size: 1.2rem;
+}
+
+.prezzoCard p {
+  font-size: 1.6rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn button {
+  color: #612406;
+  font-size: 1.2rem;
+  width: 12rem;
+  height: 2.8rem;
+  border-radius: 1.3rem;
+  border: none;
+  background-color: #F3DF85;
+  margin-top: 1rem;
+}
