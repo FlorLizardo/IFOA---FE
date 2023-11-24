@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Rock+Salt&display=swap');
+
+body, html {
+  padding: 0;
+  margin: 0 auto;
+  background-color: rgb(103, 102, 102);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem;
+  align-content: center;
+  justify-content: space-around;
+  row-gap: 3rem;
+}
+
+h4 {
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Rock Salt', cursive;
+}
+
+p {
+  font-size: 2rem;
+  font-family: 'Caveat', cursive;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 17rem;
+  text-align: center;
+  line-height: 1.7;
+  box-shadow: 1px -33px 35px -10px rgba(70, 69, 69, 0.66) inset, 10px 10px 5px -3px rgba(62, 62, 62, 0.75);
+  /* box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75); */
+}
+
+.taskWhite {
+  background-color: #F9F9C7;
+  transform: rotate(-7deg);
+  animation: taskSchiacciati2 3s linear 0s;
+}
+
+.taskViola {
+  background-color: #C2C1EB;
+  transform: rotate(-9deg);
+  animation: taskSchiacciati2 5s linear 0s;
+}
+
+.taskGreen {
+  background-color: #C6F5C9;
+  transform: rotate(4deg);
+  animation: taskSchiacciati1 3s linear 0s;
+}
+
+.task8 {
+  background-color: #C5F4C7;
+  transform: rotate(6deg);
+  animation: taskSchiacciati1 5s linear 0s;
+}
+
+.task:hover {
+  transform: translate(0);
+  cursor: pointer;
+  transform: scale(1.2);
+  z-index: 1;
+  transition-duration: 1s;
+}
+
+@keyframes taskSchiacciati1 {
+  from {
+    transform: translateX(-60px);
+  }
+
+  20% {
+    transform: rotate(-20deg);
+  }
+   to {
+    transform: rotateZ(4deg);
+  }
+}
+
+@keyframes taskSchiacciati2 {
+  from {
+    transform: translateY(-100px);
+  }
+
+  20% {
+    transform: rotate(9deg);
+  }
+   to {
+    transform: rotateZ(-8deg);
+  }
+}

@@ -13,14 +13,14 @@ body, html {
   display: flex;
   flex-direction: row;
   gap: .5rem;
+  align-items: center;
   
-  align-content: baseline;
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
   min-height: 7rem;
   background-color: #FBF7E3;
-  padding: 20px;
+  /* padding: 20px; */
   box-sizing: border-box;
 }
 
@@ -47,7 +47,7 @@ nav * {
 }
 
 .shopCont{
-  flex: 0 0 130px;
+  flex: 1 0 130px;
   min-width: 60px;
   display: flex;
   justify-content: space-between;
@@ -57,7 +57,7 @@ nav * {
   display: flex;
   font-size: 1.4rem;
   font-weight: bold;
-  flex: 0 0 133px;
+  flex: 1 0 133px;
   min-width: 60px;
   height: 70px;
   border-radius: 3rem;
