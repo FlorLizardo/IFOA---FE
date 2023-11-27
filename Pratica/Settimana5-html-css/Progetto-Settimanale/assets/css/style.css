@@ -109,13 +109,14 @@ h1 {
   width: 30vw;
 }
 
-.lettere {
+#lettere {
   width: 40vw;
-  height: 60vh;
-  overflow: hidden;
-  background-color: #FFC017;
-  display: flex;
-  align-content: center;
+  height: 70vh;
+  margin-right: 0;
+}
+
+#lettere g {
+  transition: opacity .5s linear;
 }
 
 .title button {
@@ -132,7 +133,6 @@ h1 {
 #sectionTrending {
   padding: 1rem 8rem;
   border-bottom: 1px solid gray;
-  width: 100vw;
 }
 
 #titleTrending {
@@ -143,11 +143,10 @@ h1 {
 #containerTrending {
   display: flex;
   flex-wrap: wrap;
-  width: 94vw;
-  row-gap: 1rem;
+  width: 89vw;
   gap: 2rem;
+  row-gap: 1.5rem;
   padding-bottom: 1.5rem;
-  /* justify-content: space-around; */
 }
 
 .articleTrending {
