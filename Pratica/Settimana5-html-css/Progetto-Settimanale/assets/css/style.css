@@ -131,7 +131,7 @@ h1 {
 /*Section trending*/
 
 #sectionTrending {
-  padding: 1rem 8rem;
+  padding: 1rem 2rem 1rem 8rem;
   border-bottom: 1px solid gray;
 }
 
@@ -144,7 +144,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   width: 89vw;
-  gap: 2rem;
+  gap: 1.7rem;
   row-gap: 1.5rem;
   padding-bottom: 1.5rem;
 }
@@ -153,19 +153,19 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  width: 20rem;
+  width: 21rem;
   max-height: 20rem;
 }
 
 .numeroArticle {
   color: #F2F2F2;
-  font-size: 2rem;
-  width: 1.5rem;
+  font-size: 1.8rem;
+  width: 1.3rem;
   font-weight: bold;
 }
 
 .contenuto {
-  max-width: 17rem;
+  max-width: 18rem;
   line-height: 1;
 }
 
@@ -177,7 +177,7 @@ h1 {
 }
 
 .autore img {
-  width: 1.6rem;
+  width: 1.5rem;
   border-radius: .7rem;
 }
 
