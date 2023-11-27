@@ -7,6 +7,10 @@ body, html {
   font-family: 'Roboto', sans-serif;
 }
 
+main {
+  width: 100%;
+}
+
 header, .containerTitle {
   background-color: #FFC017;
 }
@@ -27,12 +31,14 @@ a {
 
 header {
   display: flex;
-  flex: 1 1 100vw;
+  /* flex: 1 1 100%; */
   justify-content: space-between;
   padding: 0 10rem;
   align-items: center;
   height: 5rem;
   border-bottom: 1px solid black;
+  left: 0;
+  right: 0;
   top: 0;
   z-index: 3;
   position: sticky;
@@ -63,6 +69,14 @@ header a {
 nav button {
   width: 6rem;
   height: 2.5rem;
+}
+
+.cambioColore {
+  background-color: white;
+}
+
+.cambioColoreButton {
+  background-color: green;
 }
 
 /*MAIN*/
@@ -98,7 +112,10 @@ h1 {
 .lettere {
   width: 40vw;
   height: 60vh;
+  overflow: hidden;
   background-color: #FFC017;
+  display: flex;
+  align-content: center;
 }
 
 .title button {
@@ -231,6 +248,11 @@ time, span, .nameArticle p {
 }
 
 /*Aside*/
+aside {
+  height: 20rem;
+  position: sticky;
+  top: 100px;
+}
 
 .moreArticles, .asideMoreInfo ul {
   display: flex;
