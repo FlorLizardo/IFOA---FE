@@ -1,0 +1,25 @@
+$colori: (
+  primary: $primary,
+  secondary: $secondary, 
+  tertiary: $tertiary,
+);
+
+@each $key, $value in $colori {
+  .btn-#{$key} {
+    background-color: $value;
+    color: $colorFont;
+  }
+}
+
+.btn {
+  display: inline-block;
+  border-radius: .2rem;
+  margin: .5rem;
+  padding: $paddingGenerico;
+  &:hover{
+    background-color: $colorFont;
+    color: $colorHover;
+    transform: scale(1.2);
+    transition-duration: .5s;
+  }
+}

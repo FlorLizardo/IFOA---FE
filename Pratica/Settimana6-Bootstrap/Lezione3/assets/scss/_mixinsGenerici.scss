@@ -1,0 +1,19 @@
+@mixin floating ($border_radius: 1.5rem, $box_shadow: 10px 10px 19px 0px black, $border: none){
+  border-radius: $border_radius;
+  box-shadow: $box_shadow;
+  border: $border;
+}
+
+@mixin grid ($num_grid) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  & > * { //per tutti i suoi figli
+    width: calc(100 / $num_grid) * 1%;
+    flex-grow: 1;
+  }
+}
+
+@mixin shadow($value) {
+  box-shadow: $value;
+}

@@ -1,0 +1,98 @@
+@import "reset";
+@import "colori";
+@import "font";
+@import "spaziature";
+@import "posizione";
+@import "animazioni";
+@import "bottoni";
+@import "mixinsGenerici";
+
+body,
+html {
+	font-family: $font-family;
+	color: $colorFont;
+	background-color: $colorFont;
+	line-height: 1.6;
+}
+
+.showcase {
+	background-color: $bg_hero;
+	min-height: 600px;
+
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		ul {
+			display: flex;
+			list-style: none;
+		}
+		li {
+			padding: $paddingGenerico;
+		}
+		a {
+			font-size: $font_size_md;
+			color: $colorFont;
+		}
+		a:hover {
+			color: $secondary;
+		}
+	}
+	&-content {
+		@include flex-center;
+		margin-top: 30px;
+		img {
+			@include floating(
+				2rem,
+				10px 10px 14px 0px rgb(57, 56, 56),
+				2px solid $colorFont
+			);
+			width: 40vw;
+			@include animate(1s, -50%, 20%, 500ms)
+		}
+		h1{
+			@include title-big;
+			@include animate(1s, 10px, 0, 300ms);
+		}
+		p {
+			@include animate(1s, 10px, 0, 300ms);
+			color: lighten($bg_hero, 40);
+			font-size: $font_size_md;
+			line-height: 1.6;
+			letter-spacing: 1p;
+			padding-inline-end: 3 rem;
+		}
+		button:first-of-type {
+			@include animate(1s, 10px, 0, 900ms);
+		}
+		button:nth-of-type(2) {
+			@include animate(1s, 10px, 0, 1200ms);
+		}
+		button:last-of-type{
+			@include animate(1s, 10px, 0, 1500ms);
+		}
+	}
+}
+
+.logo {
+	font-size: $font_size_md;
+}
+
+.title-big {
+	@include title-big;
+}
+
+main {
+	position: relative;
+//faccio nesting per chiamare a i suoi figli
+	.line-4 {
+		@include grid(4);
+		div {
+			padding-inline: 0.5rem;
+			img {
+        width: 100%;
+				@include floating;
+			}
+		}
+	}
+}

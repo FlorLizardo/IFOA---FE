@@ -1,0 +1,15 @@
+$font-family: 'Helvetica', 'Sans-serif';
+$font_size_sm: 12px;
+$font_size_md: 16px;
+$font_size_lg: 24px;
+$font-size-xlg: 46px;
+$font_size_xxlg: 96px;
+
+
+@mixin title-big {
+  font-family: $font-family;
+  font-size: $font_size_xxlg;
+  font-weight: 900;
+  line-height: 0.95;
+  color: darken($bg_hero, 25);//questo oscurisce il colore del 25%
+}

@@ -1,0 +1,19 @@
+$primary: #0e6cff;
+$secondary: #ff8700;
+$tertiary: #4caf50;
+$colorFont: #f4f4f4;
+$colorHover: rgb(47, 47, 47);
+$bg_hero: #640fc5;
+
+//altra forma
+// $set_colors: (
+// 	primary: #0e6cff,
+// 	secondary: #ff8700,
+// 	tertiary: #4caf50,
+// 	colorFont: #f4f4f4,
+// 	colorHover: rgb(47, 47, 47),
+// 	bg_hero: #640fc5,
+// );
+
+//poi devo chiamarli col metodo map-get():
+//color: map-get($set_colors, primary)
