@@ -85,11 +85,92 @@
 						</li>
 
 						<li class="nav-item px-3">
-							<i class="bi bi-bell text-white fs-5"></i>
+							<div class="dropdown">
+								<a
+									href="#"
+									class="d-block link-light text-decoration-none"
+									id="dropdownUser1"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									<i class="bi bi-bell text-white fs-5"></i>
+								</a>
+								<ul
+									class="dropdown-menu dropdown-menu-dark text-small bg-black"
+									aria-labelledby="dropdownUser1"
+								>
+									<li>
+										<a class="dropdown-item text-white" href="#">Nessuna Notifica</a>
+									</li>
+								</ul>
+							</div>
 						</li>
 
 						<li class="nav-item text-white px-3 pt-1">
-							<h6>KIDS</h6>
+							<div class="dropdown">
+								<a
+									href="#"
+									class="d-block link-light text-decoration-none"
+									id="dropdownUser1"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									<h6>KIDS</h6>
+								</a>
+								<ul
+									class="dropdown-menu dropdown-menu-dark text-small"
+									aria-labelledby="dropdownUser1"
+								>
+									<li>
+										<a class="dropdown-item text-white d-flex" href="#">
+											<div class="col-2 me-lg-3">
+												<img
+													src="../assets/avatar.png"
+													alt="avatar"
+													class="w-100 rounded-circle"
+												/>
+											</div>
+											<p>MARTA</p>
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item text-white d-flex" href="#">
+											<div class="col-2 me-lg-3">
+												<img
+													src="../assets/avatar.png"
+													alt="avatar"
+													class="w-100 rounded-circle"
+												/>
+											</div>
+											<p>JESSICA</p>
+										</a>
+									</li>
+                  <li>
+										<a class="dropdown-item text-white d-flex" href="#">
+											<div class="col-2 me-lg-3">
+												<img
+													src="../assets/avatar.png"
+													alt="avatar"
+													class="w-100 rounded-circle"
+												/>
+											</div>
+											<p>NICOLE</p>
+										</a>
+									</li>
+                  <li>
+										<a class="dropdown-item text-white d-flex" href="#">
+											<div class="col-2 me-lg-3">
+												<img
+													src="../assets/avatar.png"
+													alt="avatar"
+													class="w-100 rounded-circle"
+												/>
+											</div>
+											<p>FLORENCIA</p>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</li>
 
 						<li class="nav-item px-3">
@@ -102,20 +183,20 @@
 									aria-expanded="false"
 								>
 									<img
-										src="../assets/avatar.png"
+										src="../assets/kids_icon.png"
 										alt="foto di profilo"
 										width="32"
 										height="32"
 									/>
 								</a>
 								<ul
-									class="dropdown-menu dropdown-menu-end dropdown-menu-dark text-small bg-black"
+									class="dropdown-menu dropdown-menu-end dropdown-menu-dark text-small "
 									aria-labelledby="dropdownUser1"
 								>
 									<li>
 										<a class="dropdown-item text-white" href="#">Manage Profiles</a>
 									</li>
-									<li><a class="dropdown-item text-white" href="#">Account</a></li>
+									<li><a class="dropdown-item text-white" href="../profile/profile.html">Account</a></li>
 									<li><a class="dropdown-item text-white" href="#">Help Center</a></li>
 									<li><hr class="dropdown-divider text-white" /></li>
 									<li>
@@ -142,7 +223,7 @@
 							>
 								Genres
 							</button>
-							<ul class="dropdown-menu">
+							<ul class="dropdown-menu dropdown-menu-dark">
 								<li><a class="dropdown-item" href="#">Horror</a></li>
 								<li><a class="dropdown-item" href="#">Fantasy</a></li>
 								<li><a class="dropdown-item" href="#">Comedy</a></li>
@@ -156,13 +237,17 @@
 							class="border border-white d-flex justify-content-center"
 							style="height: 34px; width: 42px"
 						>
-							<i class="fs-5 bi bi-list"></i>
+							<button class="bg-transparent border-0">
+								<i class="fs-5 bi bi-list text-light"></i>
+							</button>
 						</div>
 						<div
 							class="border border-white d-flex justify-content-center align-items-center"
 							style="height: 34px; width: 42px"
 						>
-							<i class="grid bi bi-grid-fill"></i>
+							<button class="bg-transparent border-0">
+								<i class="grid bi bi-grid-fill text-light"></i>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -171,72 +256,96 @@
 
 		<!--MAIN-->
 		<main>
-			<section class="container-fluid mt-lg-4 ps-4">
-
-        <!--Trending-->
+			<section class="container-fluid mt-lg-4 ps-4 pb-5">
+				<!--Trending-->
 				<div class="row ps-4">
-					<div id="carouselExample" class="carousel slide">
-						<h3 class="text-light fs-4 mb-lg-3">Trending Now</h3>
+					<h3 class="text-light fs-4 mb-lg-3">Trending Now</h3>
+					<div id="carouselTrending" class="carousel slide">
 						<div class="carousel-inner">
-							<div class="carousel-item active d-flex">
-								<img
-									src="../assets/media/media0.webp"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media1.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media10.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media11.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media12.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
+							<div class="carousel-item active">
+								<div class="row g-0">
+									<div class="col">
+										<img
+											src="../assets/media/media0.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media1.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media10.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media11.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media12.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+								</div>
 							</div>
-							<div class="carousel-item d-flex">
-								<img
-									src="../assets/media/media19.webp"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media1.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media2.webp"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media20.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media21.webp"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
+
+							<div class="carousel-item">
+								<div class="row">
+									<div class="col">
+										<img
+											src="../assets/media/media12.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media13.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media14.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media15.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media16.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+								</div>
 							</div>
 
 							<button
 								class="carousel-control-prev"
 								type="button"
-								data-bs-target="#carouselExample"
+								data-bs-target="#carouselTrending"
 								data-bs-slide="prev"
 							>
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -245,7 +354,7 @@
 							<button
 								class="carousel-control-next"
 								type="button"
-								data-bs-target="#carouselExample"
+								data-bs-target="#carouselTrending"
 								data-bs-slide="next"
 							>
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -255,70 +364,95 @@
 					</div>
 				</div>
 
-        <!--Watch-->
-        <div class="row ps-4">
-					<div id="carouselExample2" class="carousel slide">
-						<h3 class="text-light fs-4 mb-lg-3">Watch It Again</h3>
+				<!--Watch-->
+				<div class="row ps-4 pt-lg-5">
+					<h3 class="text-light fs-4 mb-lg-3">Watch It Again</h3>
+					<div id="carouselWatch" class="carousel slide">
 						<div class="carousel-inner">
-							<div class="carousel-item active d-flex">
-								<img
-									src="../assets/media/media14.webp"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media15.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media16.webp"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media17.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media18.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
+							<div class="carousel-item active">
+								<div class="row g-0">
+									<div class="col">
+										<img
+											src="../assets/media/media17.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media18.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media19.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media2.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media20.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+								</div>
 							</div>
-							<div class="carousel-item d-flex">
-								<img
-									src="../assets/media/media14.webp"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media15.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media16.webp"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media17.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media18.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
+
+							<div class="carousel-item">
+								<div class="row">
+									<div class="col">
+										<img
+											src="../assets/media/media21.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media22.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media23.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media24.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media25.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+								</div>
 							</div>
 
 							<button
 								class="carousel-control-prev"
 								type="button"
-								data-bs-target="#carouselExample2"
+								data-bs-target="#carouselWatch"
 								data-bs-slide="prev"
 							>
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -327,7 +461,7 @@
 							<button
 								class="carousel-control-next"
 								type="button"
-								data-bs-target="#carouselExample2"
+								data-bs-target="#carouselWatch"
 								data-bs-slide="next"
 							>
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -336,71 +470,95 @@
 						</div>
 					</div>
 				</div>
-
-        <!--new releases-->
-        <div class="row ps-4">
-					<div id="carouselExample3" class="carousel slide">
-						<h3 class="text-light fs-4 mb-lg-3">New Releases</h3>
+				<!--new releases-->
+				<div class="row ps-4 pt-lg-5">
+					<h3 class="text-light fs-4 mb-lg-3">New Release</h3>
+					<div id="carouselRelease" class="carousel slide">
 						<div class="carousel-inner">
-							<div class="carousel-item active d-flex">
-								<img
-									src="../assets/media/media19.webp"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media1.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media2.webp"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media20.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media21.webp"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
+							<div class="carousel-item active">
+								<div class="row g-0">
+									<div class="col">
+										<img
+											src="../assets/media/media26.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media27.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media28.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media29.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media3.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+								</div>
 							</div>
-							<div class="carousel-item d-flex">
-								<img
-									src="../assets/media/media0.webp"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media1.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media10.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media11.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
-								<img
-									src="../assets/media/media12.jpg"
-									class="d-block w-25"
-									alt="foto cover del film"
-								/>
+
+							<div class="carousel-item">
+								<div class="row">
+									<div class="col">
+										<img
+											src="../assets/media/media30.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media31.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media32.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media4.jpg"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+									<div class="col">
+										<img
+											src="../assets/media/media5.webp"
+											class="d-block w-100"
+											alt="foto cover del film"
+										/>
+									</div>
+								</div>
 							</div>
 
 							<button
 								class="carousel-control-prev"
 								type="button"
-								data-bs-target="#carouselExample3"
+								data-bs-target="#carouselRelease"
 								data-bs-slide="prev"
 							>
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -409,7 +567,7 @@
 							<button
 								class="carousel-control-next"
 								type="button"
-								data-bs-target="#carouselExample3"
+								data-bs-target="#carouselRelease"
 								data-bs-slide="next"
 							>
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -423,28 +581,90 @@
 
 		<!--FOOTER-->
 
-    <footer class="container-fluid">
-      <!--icona social-->
-      <div class="row">
-        <div class="col">
-          <button class="bg-transparent border border-0"><i class="bi bi-facebook text-secondary fs-4"></i></button>
-          <button class="bg-transparent border border-0"><i class="bi bi-instagram text-secondary fs-4"></i></button>
-          <button class="bg-transparent border border-0"><i class="bi bi-twitter text-secondary fs-4"></i></button>
-          <button class="bg-transparent border border-0"><i class="bi bi-youtube text-secondary fs-4"></i></button>
-        </div>
-      </div>
-      <!--info-->
-      <div class="row">
-        <div class="col-lg-3 d-flex flex-column">
-          <a class="link-secondary text-decoration-none" href="#">Audio and subtitles</a>
-          <a class="link-secondary text-decoration-none" href="#">Media Center</a>
-          <a class="link-secondary text-decoration-none" href="#">Privacy</a>
-          <a class="link-secondary text-decoration-none" href="#">Contact Us</a>
-          <button class="border border-secondary text-secondary bg-black mt-lg-4" style="width: 130px;">Service Code</button>
-        </div>
-      </div>
-      <div class="row"></div>
-    </footer>
+		<footer class="container-fluid px-5 mt-5">
+			<!--icona social-->
+			<div class="row d-flex justify-content-center pb-lg-2">
+				<div class="col-8">
+					<button class="bg-transparent border border-0">
+						<i class="bi bi-facebook text-secondary fs-4"></i>
+					</button>
+					<button class="bg-transparent border border-0">
+						<i class="bi bi-instagram text-secondary fs-4"></i>
+					</button>
+					<button class="bg-transparent border border-0">
+						<i class="bi bi-twitter text-secondary fs-4"></i>
+					</button>
+					<button class="bg-transparent border border-0">
+						<i class="bi bi-youtube text-secondary fs-4"></i>
+					</button>
+				</div>
+			</div>
+			<!--info-->
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-2 d-flex flex-column">
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#"
+						>Audio and subtitles</a
+					>
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#"
+						>Media Center</a
+					>
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#">Privacy</a>
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#"
+						>Contact Us</a
+					>
+					<button
+						class="border border-secondary text-secondary bg-black mt-lg-4"
+						style="width: 130px"
+					>
+						Service Code
+					</button>
+				</div>
+
+				<div class="col-lg-2 d-flex flex-column">
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#"
+						>Audio Description</a
+					>
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#"
+						>Investor Relations</a
+					>
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#"
+						>Legal Notices</a
+					>
+				</div>
+
+				<div class="col-lg-2 d-flex flex-column">
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#"
+						>Help Center</a
+					>
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#">Jobs</a>
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#"
+						>Cookies Preferences</a
+					>
+				</div>
+
+				<div class="col-lg-2 d-flex flex-column">
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#"
+						>Gift Cards</a
+					>
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#"
+						>Terms of Use</a
+					>
+					<a class="link-secondary text-decoration-none pb-lg-2" href="#"
+						>Corporate Information</a
+					>
+				</div>
+			</div>
+
+			<!--copyright-->
+			<div class="row d-flex justify-content-center mt-lg-3">
+				<div class="col-8">
+					<small class="text-secondary"
+						>@ 1997-2019 Netflix.Inc. {i-0d00fcda2fdf9c0de}</small
+					>
+				</div>
+			</div>
+		</footer>
+
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
