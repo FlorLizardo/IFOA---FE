@@ -12,31 +12,27 @@
   width: 8rem;
 }
 
-.small {
+.small, .button1 {
   font-size: .9rem;
 }
 
 .btn-edit {
   width: 6rem;
-  height: 2rem
+  height: 2rem;
+  font-size: .89rem;
 }
 
 .small-check {
-  font-size: .9rem;
+  font-size: .8rem;
+}
+
+.p-sizes {
+  font-size: 1.1rem;
 }
 
 .button1 {
-  width: 6.5rem;
+  letter-spacing: .3em;
 }
-
-.button2 {
-  width: 8rem;
-}
-
-.button3 {
-  width: 11rem;
-}
-
 
 /*Homepage*/
 .grid {
