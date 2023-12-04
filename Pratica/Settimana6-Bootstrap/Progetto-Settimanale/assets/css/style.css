@@ -1,0 +1,38 @@
+/*Profile*/
+.div-pencil {
+  width: 24px;
+  height: 23px;
+}
+
+.pencil {
+  font-size: .7rem;
+}
+
+.button-lang {
+  width: 8rem;
+}
+
+.small {
+  font-size: .9rem;
+}
+
+.small-check {
+  font-size: .9rem;
+}
+
+.button1 {
+  width: 6.5rem;
+}
+
+.button2 {
+  width: 8rem;
+}
+
+.button3 {
+  width: 11rem;
+}
+
+/*Homepage*/
+.grid {
+  font-size: .7rem;
+}
