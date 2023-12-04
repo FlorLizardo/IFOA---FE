@@ -36,3 +36,8 @@
 .grid {
   font-size: .7rem;
 }
+
+.img-hover:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
