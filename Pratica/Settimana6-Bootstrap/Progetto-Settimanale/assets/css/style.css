@@ -16,6 +16,11 @@
   font-size: .9rem;
 }
 
+.btn-edit {
+  width: 6rem;
+  height: 2rem
+}
+
 .small-check {
   font-size: .9rem;
 }
@@ -32,12 +37,25 @@
   width: 11rem;
 }
 
+
 /*Homepage*/
 .grid {
   font-size: .7rem;
 }
 
+.icona-list {
+  height: 34px; width: 42px
+}
+
+.icona-grid {
+  height: 34px; width: 42px
+}
+
 .img-hover:hover {
   transform: scale(1.2);
   transition-duration: 1s;
+}
+
+.btn-services {
+  width: 130px;
 }
