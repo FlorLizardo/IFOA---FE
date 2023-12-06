@@ -21,6 +21,7 @@ main {
   color:antiquewhite;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 fieldset .btn:nth-of-type(1) {

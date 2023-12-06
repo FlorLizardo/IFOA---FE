@@ -6,30 +6,47 @@ const btnSalva = document.getElementById('btnSalva');
 const btnCancella = document.getElementById('btnCancella');
 const stampaName = document.getElementById('stampaNome');
 
-const salvaName = localStorage.getItem('nomeUtente');
-if(salvaName) {
-  stampaName.innerText = salvaName;
-}
-
 btnSalva.addEventListener('click', function (e) {
   const nome = nameUtente.value;
   localStorage.setItem('nomeUtente', nome);
-  stampaName.innerText = nome;
+  check();
 });
 
 btnCancella.addEventListener('click', function (e) {
   localStorage.removeItem('nomeUtente');
-  stampaName.innerText = '';
+  check();
 });
 
+const check = function () {
+  const salvaName = localStorage.getItem('nomeUtente');
+  if(salvaName) {
+    txt = 'Ciao ' + localStorage.getItem('nomeUtente');
+  } else {
+    txt = 'Inserisci un nome';
+  }
+  document.getElementById('stampaNome').innerText = txt;
+}
+
+window.onload = check;
+
 //CONTATORE
-let times = sessionStorage.getItem('contatore');
-const contatore = document.getElementById('contatore');
+// let times = sessionStorage.getItem('contatore');
+// const contatore = document.getElementById('contatore');
 
-const interval = setInterval (() => {
-contatore.innerText = times;
-times++;
-sessionStorage.setItem('contatore', times);
-}, 1000);
+// const interval = setInterval (() => {
+// contatore.innerText = times;
+// times++;
+// sessionStorage.setItem('contatore', times);
+// }, 1000);
 
-interval;
+// interval;
+
+//con il prof
+let i = sessionStorage.getItem('count') ? parseInt (sessionStorage.getItem('count')) : 0;
+const conta = function () {
+  i++;
+  document.getElementById('contatore').innerText = i;
+  sessionStorage.setItem('count', i);
+}
+
+setInterval(conta, 1000);
