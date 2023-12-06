@@ -1,0 +1,46 @@
+body{
+  text-align: center;
+}
+
+.mainDiv {
+  width: 420px;
+  height: 420px;
+  border: 3px solid rgb(29, 29, 29);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.square {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: cadetblue;
+  text-align: center;
+  transition-duration: 500ms;
+}
+
+#gameOver {
+  opacity: 0;
+}
+
+.square:hover {
+  background-color: rgb(140, 226, 228);
+  transform: scale(1.1);
+}
+
+.exploded {
+  background-color: rgb(187, 66, 66);
+  background-size: contain;
+  background-image: url(bomba2.jpg);
+}
+
+.good {
+  background-color: greenyellow;
+}
+
+.levels {
+  margin-bottom: 20px;
+}
