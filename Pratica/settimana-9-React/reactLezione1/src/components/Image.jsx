@@ -5,9 +5,7 @@ const styles = {
   marginTop: '2rem'
 }
 class ImageComponent extends Component {
-  
   render() {
-    
     return (
       <img src={this.props.srcImage} alt={this.props.altImage} style={styles}/>
     )

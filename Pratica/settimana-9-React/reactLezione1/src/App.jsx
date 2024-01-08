@@ -1,11 +1,12 @@
 import './App.css'
 import ButtonComponent from './components/ButtonComponent'
 import ImageComponent from './components/Image'
+import srcImage from './assets/image1.jpg'
 
 function App() {
-const title = 'Click me'
+const title = 'Click Me'
 const altImage = 'image nature'
-const srcImage = '../src/assets/image1.jpg'
+// const srcImage = '../src/assets/image1.jpg'
 const initialCounter = 3
 
   return (

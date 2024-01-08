@@ -1,12 +1,16 @@
 import {React, useState} from 'react'
 
 const ButtonComponent = (props) => {
-  const [titleButton, setTitleButton] = useState(props.titleButton)
+  const styles = {
+    border: '1px solid green'
+  }
+
+  // const [titleButton, setTitleButton] = useState(props.titleButton)
   const [count, setCount] = useState(props.count)
 
   return (
-    <button onClick={() => setCount((count) => count + 1)}>
-      {titleButton}: {count}
+    <button style={styles} onClick={() => setCount((count) => count + 1)}>
+      {props.titleButton || 'Premi il bottone'}: {count}
     </button>
   )
 }
