@@ -14,7 +14,7 @@ const getProducts = () => {
 	fetch(myUrl, {
 		headers: myHeaders,
 	})
-		.then((response) => response.json())
+		.then((response) => {return response.json()})
 		.then((data) => {
 			products = data;
 			createProducts(data);
@@ -34,7 +34,7 @@ const createProducts = (data) => {
       <h5 class="card-title">${element.name}</h5>
       <p class="card-text">${element.description}</p>
       <p>${element.price}€</p>
-      <a class="btn btn-warning" onclick="modificaCard('${element._id}')" href="../../back-office.html?id=${element._id}">Modifica</a>
+      <a class="btn btn-warning" onclick="showModifiche()" href="../../back-office.html?id=${element._id}">Modifica</a>
       <a class="btn btn-primary" onclick="showDetailsProduct()" href="../../dettagli.html?id=${element._id}">Scopri di più</a>
     </div>
   </div>
@@ -43,31 +43,35 @@ const createProducts = (data) => {
 	});
 };
 
-const urlParams = new URLSearchParams(window.location.search);
+const urlParams = new URLSearchParams(location.search);
 const productId = urlParams.get('id');
 console.log(productId)
 
-function modificaCard(productId) {
-  
-  const finalUrl = myUrl + productId
+const showModifiche = () => {
+  const finalUrl = myUrl + productId;
   fetch(finalUrl, {
-    method: "GET",
-		headers: myHeaders,
-		// body: JSON.stringify(newRecord),
+    method: 'GET',
+    headers: myHeaders
   })
-  .then((response) => {response.json()
-    console.log(response)})
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    modificaCard(data)
+  })
+  
+  .catch(err => console.log(err));
+}
+
+function modificaCard(data) {
+  console.log(data.name);
  
-  .then((data) => {
-    console.log(document.getElementById("nameInput").value = data.name);
+    document.getElementById("nameInput").value = data.name;
     document.getElementById("brandInput").value = data.brand;
     document.getElementById("priceInput").value = data.price;
     document.getElementById("imgInput").value = data.imageUrl;
     document.getElementById("descriptionInput").value = data.description;
    
     // window.location.href = `../../back-office.html?id=${productId}`;
-  })
-		.catch((err) => console.log(err));
 }
 
 

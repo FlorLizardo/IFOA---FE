@@ -7,9 +7,9 @@ const myHeaders = {
 	"Content-Type": "application/json",
 };
 
-let products = [];
+let product = [];
 
-const getProductss = () => {
+const getProduct = () => {
 	fetch(myUrl, {
 		headers: myHeaders,
 	})
@@ -44,7 +44,7 @@ function sendProducts() {
       return response.json();
     })
     .then((data) => {
-      products = data;
+      product = data;
       
     })
     .catch((err) => console.error("Error:", err));
@@ -68,5 +68,5 @@ function reset() {
 
 
 window.onload = () => {
-  getProductss();
+  getProduct();
 }
