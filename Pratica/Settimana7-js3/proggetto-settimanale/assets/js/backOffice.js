@@ -1,6 +1,6 @@
 const myUrl = "https://striveschool-api.herokuapp.com/api/product/";
 const myToken =
-	"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4MjZlZGMwNTgzNTAwMTg1MjJjY2QiLCJpYXQiOjE3MDIzNzMxMDEsImV4cCI6MTcwMzU4MjcwMX0.qjIrOD2ZubrmodVoTVey8dY2Xb9oBh3hYQmXgIMxbGU";
+	"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4MjZlZGMwNTgzNTAwMTg1MjJjY2QiLCJpYXQiOjE3MDQ4NzE1MDksImV4cCI6MTcwNjA4MTEwOX0.nXK3g9EYqBCVAeJHGaZMQOGgla5nfVDnCXZeEa5XVnU";
 const myHeaders = {
 	"Authorization": myToken,
 	"Accept": "application/json",
@@ -37,15 +37,10 @@ function sendProducts() {
     headers: myHeaders,
     body: JSON.stringify(newRecord),
   })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
+    .then((response) => response.json())
     .then((data) => {
       product = data;
-      
+      location.href = '../../home-page.html';
     })
     .catch((err) => console.error("Error:", err));
 }
@@ -53,8 +48,8 @@ function sendProducts() {
 
 //Edit
 
-// const urlParams = new URLSearchParams(window.location.search);
-// const productId = urlParams.get('id');
+const urlParams = new URLSearchParams(location.search);
+const productId = urlParams.get('id');
 
 
 //resetForm
@@ -67,6 +62,30 @@ function reset() {
 }
 
 
+//modifiche
+const showModifiche = () => {
+  const finalUrl = myUrl + productId;
+  fetch(finalUrl, {
+    method: 'GET',
+    headers: myHeaders
+  })
+  .then(response => response.json())
+  .then(data => {
+    modificaCard(data)
+  })
+  .catch(err => console.log(err));
+}
+
+function modificaCard(data) {
+    document.getElementById("nameInput").value = data.name;
+    document.getElementById("brandInput").value = data.brand;
+    document.getElementById("priceInput").value = data.price;
+    document.getElementById("imgInput").value = data.imageUrl;
+    document.getElementById("descriptionInput").value = data.description;
+}
+
+
 window.onload = () => {
   getProduct();
+  showModifiche()
 }

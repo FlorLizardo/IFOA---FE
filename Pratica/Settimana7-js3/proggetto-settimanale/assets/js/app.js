@@ -28,7 +28,7 @@ const createProducts = (data) => {
 
 	data.forEach((element) => {
 		let newCol = `
-    <div class="card col-3" >
+    <div class="card col-3" id=${element._id}>
     <img src="${element.imageUrl}" class="card-img-top" alt="image-products">
     <div class="card-body">
       <h5 class="card-title">${element.name}</h5>
@@ -43,36 +43,38 @@ const createProducts = (data) => {
 	});
 };
 
-const urlParams = new URLSearchParams(location.search);
-const productId = urlParams.get('id');
-console.log(productId)
+//href="../../back-office.html?id=${element._id}
+// const urlParams = new URLSearchParams(location.search);
+// const productId = urlParams.get('id');
 
-const showModifiche = () => {
-  const finalUrl = myUrl + productId;
-  fetch(finalUrl, {
-    method: 'GET',
-    headers: myHeaders
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    modificaCard(data)
-  })
+
+// const showModifiche = () => {
+//   const finalUrl = myUrl + productId;
+//   fetch(finalUrl, {
+//     method: 'GET',
+//     headers: myHeaders
+//   })
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data.name);
+//     modificaCard(data)
+//   })
   
-  .catch(err => console.log(err));
-}
+//   .catch(err => console.log(err));
+// }
 
-function modificaCard(data) {
-  console.log(data.name);
+// function modificaCard(data) {
+//   console.log(productId)
+//   console.log(data.name);
  
-    document.getElementById("nameInput").value = data.name;
-    document.getElementById("brandInput").value = data.brand;
-    document.getElementById("priceInput").value = data.price;
-    document.getElementById("imgInput").value = data.imageUrl;
-    document.getElementById("descriptionInput").value = data.description;
+//     document.getElementById("nameInput").value = data.name;
+//     document.getElementById("brandInput").value = data.brand;
+//     document.getElementById("priceInput").value = data.price;
+//     document.getElementById("imgInput").value = data.imageUrl;
+//     document.getElementById("descriptionInput").value = data.description;
    
-    // window.location.href = `../../back-office.html?id=${productId}`;
-}
+//     // window.location.href = `../../back-office.html?id=${productId}`;
+// }
 
 
 

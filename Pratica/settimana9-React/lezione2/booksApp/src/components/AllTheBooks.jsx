@@ -10,7 +10,7 @@ const AllTheBooks = () => {
     },
     imgCard: {
       width: '15rem',
-      height: '19rem',
+      height: '20rem',
       margin: '0 auto'
     }
 
