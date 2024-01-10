@@ -1,38 +1,35 @@
-import {Card, Button} from 'react-bootstrap'
+import { useEffect, useState } from 'react'
 
-import { useState } from 'react'
 import ButtonsBooks from './ButtonsBooks'
+import SingleBook from './SingleBook'
+import InputSearch from './inputSearch'
+
 
 const AllTheBooks = () => {
-  const customStyles = {
-    cardContainer: {
-      width: '18rem'
-    },
-    imgCard: {
-      width: '15rem',
-      height: '20rem',
-      margin: '0 auto'
-    }
+  
+  const [books, setBooks] = useState([])
+  const [booksFiltered, setBooksFiltered] = useState([])
 
+  const handleSearch = (event) => {
+    let value = new RegExp(event.target.value, 'i')
+    const state = books
+    const result = state.filter((book) => {
+      return value.test(book.title)
+    })
+    setBooksFiltered(result)
   }
 
-  const [books, setBooks] = useState([])
+  useEffect(() => {
+    setBooksFiltered(books)
+  }, [books])
 
   return(
     <>
+    <InputSearch handleSearch={handleSearch}/>
     <ButtonsBooks setBooks={setBooks} />
     <div className='d-flex flex-wrap justify-content-around gap-3'>
-      {books.map((book) => 
-      <Card style={customStyles.cardContainer} key={book.asin}>
-      <Card.Img variant="top" src={book.img} alt='copertina del libro' style={customStyles.imgCard} />
-      <Card.Body>
-        <Card.Title className='text-truncate'>{book.title}</Card.Title>
-        <Card.Text>
-          {`${book.price} € - ${book.category}`}
-        </Card.Text>
-        <Button variant="primary">Acquista</Button>
-      </Card.Body>
-    </Card>
+      {booksFiltered.map((book) => 
+        <SingleBook book={book} key={book.asin}/>
       )}
     </div>
     </>
