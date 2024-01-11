@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import {Card, Button} from 'react-bootstrap'
+import CommentArea from './CommentArea'
 
 const SingleBook = ({book}) => {
   const customStyles = {
@@ -17,6 +18,8 @@ const SingleBook = ({book}) => {
 
  
   return (
+    <>
+    <div className='d-flex flex-column'>
     <Card style={{...customStyles.cardContainer, border: selected && '4px solid red'}} key={book.asin}>
       <Card.Img variant="top" src={book.img} alt='copertina del libro' style={customStyles.imgCard} onClick={() => setSelected(!selected)} />
       <Card.Body>
@@ -27,6 +30,9 @@ const SingleBook = ({book}) => {
         <Button variant="primary">Acquista</Button>
       </Card.Body>
     </Card>
+    {selected && <CommentArea asin={book.asin}/>}
+    </div>
+    </>
   )
 }
 
