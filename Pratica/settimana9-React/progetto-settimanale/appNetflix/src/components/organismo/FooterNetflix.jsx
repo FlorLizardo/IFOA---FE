@@ -1,98 +1,27 @@
+import LinkSocialFooter from "../atomo/LinkSocialFooter";
+
+import ColFooter from "../molecola/ColFooter";
+
 const FooterNetflix = () => {
 const styles = {
 	marginTop: '8rem',
+}
+
+const social = {
+	hrefSocial: ["https://www.facebook.com/" ,"https://www.instagram.com/", "https://www.instagram.com/", "https://twitter.com/"],
+	iconSocial: ['bi bi-facebook' ,'bi bi-instagram', 'bi bi-twitter', 'bi bi-youtube']
 }
 
 	return (
 		<footer style={styles} className="container-fluid px-5 pb-3">
 			<div className="row d-flex justify-content-center pb-lg-2">
 				<div className="col-8">
-					<a
-						className="text-decoration-none pe-2"
-						href="https://www.facebook.com/"
-						target="_blank"
-					>
-						<i className="bi bi-facebook text-secondary fs-4"></i>
-					</a>
-					<a
-						className="text-decoration-none pe-2"
-						href="https://www.instagram.com/"
-						target="_blank"
-					>
-						<i className="bi bi-instagram text-secondary fs-4"></i>
-					</a>
-					<a
-						className="text-decoration-none pe-2"
-						href="https://twitter.com/"
-						target="_blank"
-					>
-						<i className="bi bi-twitter text-secondary fs-4"></i>
-					</a>
-					<a
-						className="text-decoration-none pe-2"
-						href="https://www.youtube.com/"
-						target="_blank"
-					>
-						<i className="bi bi-youtube text-secondary fs-4"></i>
-					</a>
+					{social.hrefSocial.map((href, index) => <LinkSocialFooter href={href} icon={social.iconSocial[index]} key={index}/>)}
 				</div>
 			</div>
+			
 			{/* <!--info--> */}
-			<div className="row d-flex justify-content-center">
-				<div className="col-lg-2 d-flex flex-column">
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Audio and subtitles
-					</a>
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Media Center
-					</a>
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Privacy
-					</a>
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Contact Us
-					</a>
-					<button className="btn-services border border-secondary text-secondary bg-black mt-lg-4">
-						Service Code
-					</button>
-				</div>
-
-				<div className="col-lg-2 d-flex flex-column">
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Audio Description
-					</a>
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Investor Relations
-					</a>
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Legal Notices
-					</a>
-				</div>
-
-				<div className="col-lg-2 d-flex flex-column">
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Help Center
-					</a>
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Jobs
-					</a>
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Cookies Preferences
-					</a>
-				</div>
-
-				<div className="col-lg-2 d-flex flex-column">
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Gift Cards
-					</a>
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Terms of Use
-					</a>
-					<a className="link-secondary text-decoration-none pb-lg-2" href="#">
-						Corporate Information
-					</a>
-				</div>
-			</div>
+			<ColFooter />
 
 			{/* <!--copyright--> */}
 			<div className="row d-flex justify-content-center mt-lg-3">

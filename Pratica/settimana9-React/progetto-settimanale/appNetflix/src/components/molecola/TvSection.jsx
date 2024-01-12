@@ -1,5 +1,5 @@
 import { Col} from "react-bootstrap";
-import DropGenres from "./DropGenres";
+import DropGenres from "../atomo/DropGenres";
 
 const TvSection = () => {
 	return (

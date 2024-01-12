@@ -1,4 +1,4 @@
-import DropButtonNav from "./DropButtonNav";
+import DropButtonNav from "../atomo/DropButtonNav";
 
 
 const LinkNavRigth = () => {
