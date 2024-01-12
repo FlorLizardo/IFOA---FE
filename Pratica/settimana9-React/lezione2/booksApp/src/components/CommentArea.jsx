@@ -42,17 +42,6 @@ const CommentArea = ({asin}) => {
 
   return(
     <div style={styles}>
-{/* 
-            <h3>Commenti</h3>
-
-            {isLoading && <SpinnerWait />}
-            {comments?.length > 0
-              ? comments.map((comment, index) => <SingleComment comment={comment} key={index} />)
-              : <p>Non ci sono commenti</p>
-            }
-            <NewBookRate asin={asin}/> */}
-     
-
       <div className="modal show" style={{ display: 'block', position: 'initial'}}>
       <Modal.Dialog>
         <Modal.Header>
