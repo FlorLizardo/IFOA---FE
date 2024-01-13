@@ -36,17 +36,12 @@ const Gallery = ({ saga }) => {
 		myFetch();
 	}, []);
 
-	const [hover, setHover] = useState(false);
 	const styles = {
 		div: {
 			width: "14rem",
 			height: "18rem",
 			transition: "0.4s ease",
-		},
-		hover: {
-			transform: hover ? "scale(1.1)" : "scale(1)",
-			cursor: "pointer",
-		},
+		}
 	};
 
 	return (
@@ -57,14 +52,14 @@ const Gallery = ({ saga }) => {
 				{isError && <AlertError />}
 				<Carousel>
 					<Carousel.Item>
-						<div style={{ ...styles.div, ...styles.hover }} className="d-flex gap-2">
+						<div style={styles.div} className="d-flex gap-2">
 							{movies.slice(0, 7).map((movie) => (
 								<MySingleMovie movie={movie} key={movie.imdbID} />
 							))}
 						</div>
 					</Carousel.Item>
 					<Carousel.Item>
-						<div style={{ ...styles.div, ...styles.hover }} className="d-flex gap-2">
+						<div style={styles.div} className="d-flex gap-2">
 							{movies.slice(0, 7).map((movie) => (
 								<MySingleMovie movie={movie} key={movie.imdbID} />
 							))}
