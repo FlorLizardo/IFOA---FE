@@ -23,10 +23,7 @@ const MySingleMovie = ({movie}) => {
   return (
 
         <img src={movie.Poster} alt={movie.Title} style={{...styles.img, ...styles.hover}} onMouseEnter={() => setHover(true)} onMouseLeave={()=>setHover(false)} />
-      
-      // <div style={{...styles.div, ...styles.hover}} onMouseEnter={() => setHover(true)} onMouseLeave={()=>setHover(false)}>
-      //   <img src={movie.Poster} alt={movie.Title} style={styles.img} />
-      // </div>
+    
   )
 }
 

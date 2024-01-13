@@ -50,32 +50,6 @@ const Gallery = ({ saga }) => {
 	};
 
 	return (
-		// <Row className="px-3">
-		//   <h3 className="text-white pt-5 pb-2 h4">{saga}</h3>
-		//  <Col className="d-flex gap-2">
-
-		//  <Carousel>
-		//   <Carousel.Item className="d-flex">
-		//       {movies.slice(0, 5).map((movie) =>
-		//       <MySingleMovie movie={movie} key={movie.imdbID}/>
-		//     )}
-		//   </Carousel.Item>
-		//   <Carousel.Item className="d-flex">
-		//     {movies.slice(6).map((movie) =>
-		//     <MySingleMovie movie={movie} key={movie.imdbID}/>
-		//   )}
-
-		//   </Carousel.Item>
-		// </Carousel>
-
-		//   {/* {isLoading && <SpinnerWait/>}
-		//   {isError && <AlertError />}
-		//  {movies.slice(0, 6).map((movie) =>
-		//   <MySingleMovie movie={movie} key={movie.imdbID}/>
-		//  )} */}
-		//  </Col>
-		// </Row>
-
 		<Row className="px-5">
 			<h3 className="text-white pt-5 pb-2 h4">{saga}</h3>
 			<Col>
@@ -83,7 +57,7 @@ const Gallery = ({ saga }) => {
 				{isError && <AlertError />}
 				<Carousel>
 					<Carousel.Item>
-						<div style={{ ...styles.div, ...styles.hover }} className="d-flex gap-2" >
+						<div style={{ ...styles.div, ...styles.hover }} className="d-flex gap-2">
 							{movies.slice(0, 7).map((movie) => (
 								<MySingleMovie movie={movie} key={movie.imdbID} />
 							))}
