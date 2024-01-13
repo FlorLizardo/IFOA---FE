@@ -1,7 +1,7 @@
 const LinkNav = () => {
   return (
     <div>
-      <ul className="navbar-nav">
+      <ul className="navbar-nav d-flex align-items-center">
         <li className="nav-item">
           <a className="nav-link text-white" href="#">Home</a>
         </li>

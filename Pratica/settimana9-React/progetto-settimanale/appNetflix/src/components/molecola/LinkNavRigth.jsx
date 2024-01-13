@@ -4,7 +4,7 @@ import DropButtonNav from "../atomo/DropButtonNav";
 const LinkNavRigth = () => {
 	return (
 		<div>
-			<ul className="navbar-nav">
+			<ul className="navbar-nav d-flex align-items-center">
 				<li className="nav-item px-3">
 					<a
 						className="nav-link p-0 ps-1"

@@ -10,7 +10,7 @@ const MySingleMovie = ({movie}) => {
      
     },
     hover: {
-      transform: hover ? 'scale(1.1)' : 'scale(1)',
+      transform: hover ? 'scale(1.2)' : 'scale(1)',
       cursor: 'pointer'
     },
     img: {

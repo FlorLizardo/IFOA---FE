@@ -76,7 +76,7 @@ const Gallery = ({ saga }) => {
 		//  </Col>
 		// </Row>
 
-		<Row className="px-3">
+		<Row className="px-5">
 			<h3 className="text-white pt-5 pb-2 h4">{saga}</h3>
 			<Col>
 				{isLoading && <SpinnerWait />}
