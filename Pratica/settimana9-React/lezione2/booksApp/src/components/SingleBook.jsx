@@ -10,7 +10,8 @@ const SingleBook = ({book}) => {
     imgCard: {
       width: '15rem',
       height: '20rem',
-      margin: '0 auto'
+      margin: '0 auto',
+      cursor: 'pointer'
     }
   }
 

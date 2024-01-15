@@ -1,33 +1,14 @@
 import { useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
 
-const NewBookRate = ({asin}) => {
+const NewBookRate = ({postData}) => {
   const [newComment, setNewComment] = useState({
     comment: '',
     rate: ''
   })
 
-  const myToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4MjZlZGMwNTgzNTAwMTg1MjJjY2QiLCJpYXQiOjE3MDQ4NzE1MDksImV4cCI6MTcwNjA4MTEwOX0.nXK3g9EYqBCVAeJHGaZMQOGgla5nfVDnCXZeEa5XVnU";
-
-  const postData = async () => {
-    try{
-      const resp = await fetch ('https://striveschool-api.herokuapp.com/api/comments/', {
-        method: 'POST',
-        body: JSON.stringify({...newComment, elementId: asin}),
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: myToken
-        }
-      })
-      if(resp.ok) {
-        console.log('ok');
-      }else {
-        console.log('error');
-      }
-    }
-    catch(error) {
-      console.log(error);
-    }
+  const sendData = () => {
+    postData(newComment)
   }
 
   return (
@@ -42,7 +23,7 @@ const NewBookRate = ({asin}) => {
         <option value='4'>4</option>
         <option value='5'>5</option>
       </Form.Select>
-      <Button variant="outline-primary" size="sm" className="mt-3" onClick={() => postData()}>
+      <Button variant="outline-primary" size="sm" className="mt-3" onClick={() => sendData()}>
           Invia
       </Button>
     </div>
