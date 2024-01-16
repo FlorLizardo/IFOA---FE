@@ -64,11 +64,12 @@ class Menu extends Component {
         {this.state.filteredProducts.map((gelato) => (
 						<SingleGelato
 							key={gelato.id}
-							nome={gelato.nome}
-							img={gelato.img}
-							categoria={gelato.categoria}
-							prezzo={gelato.prezzo}
-							descrizione={gelato.descrizione}
+              {...gelato} //così richiamo tutte le props del elemento
+							// nome={gelato.nome}
+							// img={gelato.img}
+							// categoria={gelato.categoria}
+							// prezzo={gelato.prezzo}
+							// descrizione={gelato.descrizione}
 						/>
 					))}
         </div>
