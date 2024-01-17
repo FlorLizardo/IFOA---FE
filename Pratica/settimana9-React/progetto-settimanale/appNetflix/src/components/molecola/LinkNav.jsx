@@ -1,14 +1,16 @@
+import { Link } from "react-router-dom"
+
 const LinkNav = () => {
   return (
     <div>
       <ul className="navbar-nav d-flex align-items-center">
         <li className="nav-item">
-          <a className="nav-link text-white" href="#">Home</a>
+          <Link className="nav-link text-white" to='/'>Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-white active" href="#">
+        <Link className="nav-link text-white active" to='/tvShows'>
             TV Shows
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
 		 			<a className="nav-link text-white" href="#">Movies</a>
