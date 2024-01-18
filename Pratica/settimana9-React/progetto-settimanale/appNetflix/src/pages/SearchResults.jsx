@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import MySingleMovie from "../components/molecola/MySingleMovie";
+import { Button } from "react-bootstrap";
 
 const SearchResults = () => {
 	const styles = {
@@ -43,6 +44,8 @@ const SearchResults = () => {
     }
 	}, [search]);
 
+	// const navigate = useNavigate
+	// navigate
 
 	return (
 		<>
@@ -52,12 +55,15 @@ const SearchResults = () => {
 				<div style={styles.div}>
 					{movies?.length > 0 &&
 						movies.map((movie) => (
+							<div className="d-flex flex-column" key={movie.imdbID}>
 							<img
 								style={styles.img}
-								key={movie.imdbID}
+								
 								src={movie.Poster}
 								alt={movie.Title}
 							/>
+							<Link to={`/movieDetails/${movie.imdbID}`} className="btn btn-danger">Dettagli</Link>
+							</div>
 						))}
 				</div>
 			</div>

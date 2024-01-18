@@ -10,13 +10,6 @@ const MainNetflix = ({saga, title}) => {
     minHeight: '75vh'
   }
 
-  // const [search, setSearch] = useState('')
-  // const navigate = useNavigate()
-
-  // const handleNavigate = () => {
-  //   navigate('/results?cerca=' + search)
-  // }
-
   return (
     <>
       <Container fluid style={styles}>

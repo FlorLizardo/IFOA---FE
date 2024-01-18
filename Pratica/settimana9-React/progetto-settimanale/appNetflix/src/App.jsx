@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage'
 import TvShows from './pages/TvShows'
 import NotFound from './components/organismo/NotFound';
 import SearchResults from './pages/SearchResults';
+import MovieDetails from './pages/MovieDetails';
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
           <Route path='/' element={<HomePage />}/>
           <Route path='/tvShows' element={<TvShows />}/>
           <Route path='/results' element={<SearchResults />}/>
+          <Route path='/movieDetails/:movieId' element={<MovieDetails />} />
           <Route path='*' element={<NotFound/>}/>
         </Routes>
         <FooterNetflix />
