@@ -1,5 +1,21 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-body, * {
-  background-color: #937CEF;
+body {
+  /* background-color: #0990e4; */
+  background: rgb(59,108,227);
+background: linear-gradient(360deg, rgba(59,108,227,1) 39%, rgba(4,185,248,0.9473039215686274) 100%);
+}
+
+@media screen and (max-width: 767px) {
+  .cardGiorno {
+    width: 100%!important;
+    height: 15vh!important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cardGiorno {
+    width: 16%!important;
+    height: 20vh!important;
+  }
 }
