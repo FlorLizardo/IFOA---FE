@@ -37,12 +37,6 @@ const Main = () => {
               {weather.id ? (
                 <>
                 <ResultsSearch weather={weather} />
-                {/* <Row> */}
-                  {/* <Col>
-                    <p> Temperatura: {forecast?.[0].main.temp}</p>
-                    
-                  </Col> */}
-                {/* </Row> */}
                 </>
              
              ) 
@@ -51,17 +45,7 @@ const Main = () => {
              <p>{initialTitle}</p>
              </Col>
              )}
-             </Row>
-
-            {/* {cities ? cities.map((city, index) => 
-              <div className="btn btn-outline-secondary my-3 py-3" key={index} >
-              <Link to={`/results/${city.lat}/${city.lon}`} className="text-decoration-none text-black bg-transparent">{city.name}, {city.state}, {city.country}</Link>
-              </div>
-            ): (
-              <h1 className="text-dark mt-5 p-5">{initialTitle.toUpperCase()}</h1>
-            )} */}
-           
-        
+             </Row>       
       </Container>
     </>
   )

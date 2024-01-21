@@ -3,22 +3,7 @@ import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import Chart from "chart.js/auto";
 
 const ResultsSearch = ({ weather }) => {
-	// const [forecast, setForecast] = useState();
-
-	// const myFetchForecast = async () => {
-	// 	const resp = await fetch(
-	// 		`http://api.openweathermap.org/data/2.5/forecast?id=${weather.id}&appid=a829039625b8c3a5900bfd0863a4c234&units=metric&lang=it`
-	// 	);
-	// 	const data = await resp.json();
-	// 	setForecast(data.list);
-	// };
-
-	// useEffect(() => {
-	// 	if (weather.id) {
-	// 		myFetchForecast();
-	// 	}
-	// }, [weather]);
-
+	
 	const [forecast, setForecast] = useState([]);
 	const [datiTotali, setDatiTotali] = useState([]);
 
@@ -29,7 +14,6 @@ const myFetchForecast = async () => {
     );
     const data = await resp.json();
 
-    // Procesar datos para obtener temperaturas por día
     const dailyTemp = {};
     
     data.list.forEach((el) => {
@@ -55,7 +39,7 @@ const myFetchForecast = async () => {
     setForecast(resultado);
 		setDatiTotali(data);
   } catch (error) {
-    console.error('Error al obtener datos del pronóstico:', error);
+    console.error('Errore:', error);
   }
 };
 
@@ -73,8 +57,8 @@ useEffect(() => {
 		<>
 			<Col xs="12" md="6" className="d-flex justify-content-center mb-4">
 				<div
-					className="p-3 px-4 bg-transparent border border-2-secondary d-flex flex-column rounded rounded-3 justify-content-center"
-					style={{ width: "80%", height: "27rem" }}
+					className="p-3 px-4 border border-2-secondary d-flex flex-column rounded rounded-3 justify-content-center"
+					style={{ width: "80%", height: "27rem", backgroundColor: 'rgba(225, 225, 225, 0.3)'}}
 				>
 					<h1 className="display-2 fw-medium">{weather?.name}</h1>
 					<h2 className="h1 ps-2 py-2">{weather?.main?.temp.toFixed(1)} °C</h2>
@@ -94,8 +78,8 @@ useEffect(() => {
 				className="d-flex align-items-center justify-content-center justify-content-md-start ps-md-5 flex-wrap gap-4"
 			>
 				<Card
-					className=" p-2 bg-transparent border border-2-secondary rounded rounded-3"
-					style={{ width: "36%", height: "8rem" }}
+					className=" p-2 border border-2-secondary rounded rounded-3"
+					style={{ width: "36%", height: "8rem", backgroundColor: 'rgba(225, 225, 225, 0.2)' }}
 				>
 					<h3>Cielo: </h3>
 					<p>{weather?.weather?.[0]?.description}</p>
