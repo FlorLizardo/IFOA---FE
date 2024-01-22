@@ -7,7 +7,6 @@ const InputMeteo = ({myFetchWeather, search, setSearch}) => {
       width: '20rem'
     }
   }
-	// const [search, setSearch] = useState('')
 
 	return (
 		<InputGroup  style={styles.buttonSearch} >

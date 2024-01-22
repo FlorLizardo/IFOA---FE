@@ -1,22 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-import Main from './components/Main'
+import Home from './components/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import ResultsSearch from './components/ResultsSearch'
-import Header from './components/Header'
-import { useEffect, useState } from 'react'
+import NotFound from './components/NotFound'
 
 function App() {
-    
+  //stabilisco delle routes per le eventuali pagine
   return (
-    <BrowserRouter>
+    <BrowserRouter> 
       <Routes>
-        <Route path='/' element={<Main />} />
-        {/* <Route path='/results/:city' element={<ResultsSearch />} /> */}
+        <Route path='/' element={<Home />} />
+        <Route path='/*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-      
-    
   )
 }
 
