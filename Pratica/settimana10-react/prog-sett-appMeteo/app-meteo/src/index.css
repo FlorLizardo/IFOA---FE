@@ -6,6 +6,19 @@ body {
 color: #ffff;
 }
 
+@media screen and (max-width: 575px) {
+  .cardWeather {
+    width: 70%!important;
+    height: 6rem!important;
+  }
+  .divImgCardWeather {
+    width: 22%!important;
+  }
+  .divInfoCard {
+    width: 70%;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .cardGiorno {
     width: 100%!important;
@@ -14,6 +27,15 @@ color: #ffff;
   .cardCity {
     width: 90%;
     height: 20rem
+  }
+  .colContainer {
+    height: 50%!important;
+  }
+  .divContainer{
+    height: 30%!important;
+  }
+  .graficoContainer{
+    height: 30%!important;
   }
 }
 

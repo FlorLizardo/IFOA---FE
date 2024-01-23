@@ -1,10 +1,12 @@
 import { Container, Row, Col, Card } from "react-bootstrap"
-import InputMeteo from "./InputMeteo"
+import InputMeteo from "../components/InputMeteo"
 import { useState } from "react"
-import ResultsSearch from "./ResultsSearch"
-import AlertError from "./AlertError"
-import InitialTitle from "./InitialTitle"
-
+import ResultsSearch from "../components/ResultsSearch"
+import AlertError from "../components/AlertError"
+import InitialTitle from "../components/InitialTitle"
+import { weather } from "../actions/fetchWeatherActions"
+import { useDispatch, useSelector } from "react-redux"
+import { isErrorActions } from "../actions/alertErrorActions"
 
 const Home = () => {
     const styles = {
@@ -15,8 +17,10 @@ const Home = () => {
 	};
 
   const [search, setSearch] = useState('')
-	const [weather, setWeather] = useState({});
-  const [error, setError] = useState(false);
+  const dispatch = useDispatch()
+  const error = useSelector(state => state.errorReducer.isError);
+  const weatherData = useSelector(state => state.fetchWeather)
+ 
 
   const myFetchWeather = async () => { //fetch dei dati del giorno
     try{
@@ -24,14 +28,16 @@ const Home = () => {
         `http://api.openweathermap.org/data/2.5/weather?q=${search}&APPID=a829039625b8c3a5900bfd0863a4c234&lang=it&units=metric`
       );
       const data = await resp.json();
-      setWeather(data);
-      setError(false) //gestione dell'errore
+      dispatch(weather(data))
+      dispatch(isErrorActions(false)) //gestione dell'errore
     }
     catch(err) {
-      setError(true)
+      dispatch(isErrorActions(true))
+      console.log(err);
     }
 	};
-  
+
+ 
   return (
     <>
       <Container fluid style={styles.container}>
@@ -42,9 +48,9 @@ const Home = () => {
           </Col>
           </Row>
           <Row>
-              {weather.id ? (
+              {weatherData.fetchWeather.id ? (
                 <>
-                <ResultsSearch weather={weather} /> {/* componente con props */}
+                <ResultsSearch /> {/* componente con i risultati della ricerca */}
                 </>
              ) 
              : (
@@ -57,4 +63,3 @@ const Home = () => {
 }
 
 export default Home
-
