@@ -1,20 +1,12 @@
-//url, token, headers
-// const myUrl = "https://striveschool-api.herokuapp.com/api/product/";
-// const myToken =
-// 	"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4MjZlZGMwNTgzNTAwMTg1MjJjY2QiLCJpYXQiOjE3MDIzNzMxMDEsImV4cCI6MTcwMzU4MjcwMX0.qjIrOD2ZubrmodVoTVey8dY2Xb9oBh3hYQmXgIMxbGU";
-// const myHeaders = {
-// 	"Authorization": myToken,
-// 	"Accept": "application/json",
-// 	"Content-Type": "application/json",
-// };
-
 let products = [];
 
 const getProducts = () => {
 	fetch(myUrl, {
 		headers: myHeaders,
 	})
-		.then((response) => {return response.json()})
+		.then((response) => {
+			return response.json();
+		})
 		.then((data) => {
 			products = data;
 			createProducts(data);
@@ -24,7 +16,6 @@ const getProducts = () => {
 //products homePage
 const createProducts = (data) => {
 	const card = document.getElementById("rowCard");
-	// card.innerHTML = '';
 
 	data.forEach((element) => {
 		let newCol = `
@@ -34,8 +25,8 @@ const createProducts = (data) => {
       <h5 class="card-title">${element.name}</h5>
       <p class="card-text">${element.description}</p>
       <p>${element.price}€</p>
-      <a class="btn btn-warning" onclick="showModifiche()" href="../../back-office.html?id=${element._id}">Modifica</a>
-      <a class="btn btn-primary" onclick="showDetailsProduct()" href="../../dettagli.html?id=${element._id}">Scopri di più</a>
+      <a class="btn btn-warning" onclick="showModifiche()" href="back-office.html?id=${element._id}">Modifica</a>
+      <a class="btn btn-primary" onclick="showDetailsProduct()" href="dettagli.html?id=${element._id}">Scopri di più</a>
     </div>
   </div>
     `;
@@ -43,45 +34,6 @@ const createProducts = (data) => {
 	});
 };
 
-//href="../../back-office.html?id=${element._id}
-// const urlParams = new URLSearchParams(location.search);
-// const productId = urlParams.get('id');
-
-
-// const showModifiche = () => {
-//   const finalUrl = myUrl + productId;
-//   fetch(finalUrl, {
-//     method: 'GET',
-//     headers: myHeaders
-//   })
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data.name);
-//     modificaCard(data)
-//   })
-  
-//   .catch(err => console.log(err));
-// }
-
-// function modificaCard(data) {
-//   console.log(productId)
-//   console.log(data.name);
- 
-//     document.getElementById("nameInput").value = data.name;
-//     document.getElementById("brandInput").value = data.brand;
-//     document.getElementById("priceInput").value = data.price;
-//     document.getElementById("imgInput").value = data.imageUrl;
-//     document.getElementById("descriptionInput").value = data.description;
-   
-//     // window.location.href = `../../back-office.html?id=${productId}`;
-// }
-
-
-
-
-//dettagli
-
 window.onload = () => {
 	getProducts();
-
 };

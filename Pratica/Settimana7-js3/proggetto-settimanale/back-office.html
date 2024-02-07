@@ -10,7 +10,7 @@
   <header>
     <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
-          <img src="../assets/imgs/amazon-logo-white.png" alt="amazon-logo" class="img-fluid" width="120">
+          <img src="assets/imgs/amazon-logo-white.png" alt="amazon-logo" class="img-fluid" width="120">
           <a href="./home-page.html">Home</a>
         </div>
     </nav>
@@ -46,8 +46,8 @@
           <button type="button" class="btn btn-warning" onclick="sendProducts()">Save</button>
           <button type="button" class="btn btn-light border border-3" onclick="reset()">Reset</button>
 
-          <button type="button" class="btn btn-warning" onclick="sendProducts('edit', '${element._id}')" id="edit">Modifica</button>
-          <button type="button" class="btn btn-outline-danger" onclick="deleteProd('${element._id}')" id="delete">Cancella</button>
+          <button type="button" class="btn btn-warning" onclick="saveMofifiche()" id="edit">Modifica</button>
+          <button type="button" class="btn btn-outline-danger" onclick="deleteProduct()" id="delete">Cancella</button>
         </form>
       </div>
     </div>
