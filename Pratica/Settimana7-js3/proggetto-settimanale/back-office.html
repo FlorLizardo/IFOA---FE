@@ -42,12 +42,12 @@
             <label for="nameInput" class="form-label fw-bold">Descrizzione prodotto</label>
             <input type="text" class="form-control" id="descriptionInput">
           </div>
-
-          <button type="button" class="btn btn-warning" onclick="sendProducts()">Save</button>
-          <button type="button" class="btn btn-light border border-3" onclick="reset()">Reset</button>
-
-          <button type="button" class="btn btn-warning" onclick="saveMofifiche()" id="edit">Modifica</button>
-          <button type="button" class="btn btn-outline-danger" onclick="deleteProduct()" id="delete">Cancella</button>
+          <div class="d-flex gap-3 justify-content-end mt-5">
+            <button type="button" class="btn btn-warning" onclick="saveMofifiche()" id="edit">Modifica</button>
+            <button type="button" class="btn btn-outline-danger" onclick="deleteProduct()" id="delete">Cancella</button>
+            <button type="button" class="btn btn-primary" onclick="sendProducts()" id="save">Save</button>
+            <button type="button" class="btn btn-light border border-3" onclick="reset()" >Reset</button>
+          </div>
         </form>
       </div>
     </div>

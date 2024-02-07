@@ -24,7 +24,7 @@ function populateDetailPage(data) {
 
 	let newDetails = `
         <img src="${data.imageUrl}" alt="" height="300px">
-        <div class=p-5>
+        <div class='pt-4 ps-3'>
             <h5>Nome prodotto: ${data.name}</h5>
             <p>Descrizione: ${data.description}</p>
             <p>Brand: ${data.brand}</p>

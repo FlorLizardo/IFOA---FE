@@ -9,39 +9,34 @@ const myHeaders = {
 
 let product = [];
 
-const getProduct = () => {
-	fetch(myUrl, {
-		headers: myHeaders,
-	})
-		.then((response) => response.json())
-		.then((data) => {
-			products = data;
-		});
-};
-
 //Form back-office
-
 function sendProducts() {
-	const newRecord = {
-		name: document.getElementById("nameInput").value,
-		brand: document.getElementById("brandInput").value,
-		price: document.getElementById("priceInput").value,
-		imageUrl: document.getElementById("imgInput").value,
-		description: document.getElementById("descriptionInput").value,
-	};
-	console.log("newRecord:", newRecord);
+	
+	const	name = document.getElementById("nameInput").value;
+	const	brand = document.getElementById("brandInput").value;
+	const	price = document.getElementById("priceInput").value;
+	const	imageUrl = document.getElementById("imgInput").value;
+	const	description = document.getElementById("descriptionInput").value;
 
-	fetch(myUrl, {
-		method: "POST",
-		headers: myHeaders,
-		body: JSON.stringify(newRecord),
-	})
-		.then((response) => response.json())
-		.then((data) => {
-			product = data;
-			location.href = "home-page.html";
-		})
-		.catch((err) => console.error("Error:", err));
+  if(name && brand && price && imageUrl && description) {
+    const newRecord = {
+      name, brand, price, imageUrl, description
+    }
+    fetch(myUrl, {
+      method: "POST",
+      headers: myHeaders,
+      body: JSON.stringify(newRecord),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        product = data;
+        location.href = "home-page.html";
+      })
+      .catch((err) => console.error("Error:", err));
+  }else {
+    alert('Devi compilare tutti i campi')
+  }
+
 }
 
 //resetForm
@@ -79,29 +74,40 @@ function modificaCard(data) {
 	document.getElementById("descriptionInput").value = data.description;
 }
 
-//button salvare modifiche
+//salvare le modifiche
 const saveMofifiche = () => {
-  const newRecord = {
-		name: document.getElementById("nameInput").value,
-		brand: document.getElementById("brandInput").value,
-		price: document.getElementById("priceInput").value,
-		imageUrl: document.getElementById("imgInput").value,
-		description: document.getElementById("descriptionInput").value,
-	};
+  const name = document.getElementById("nameInput").value;
+  const brand = document.getElementById("brandInput").value;
+  const price = document.getElementById("priceInput").value;
+  const imageUrl = document.getElementById("imgInput").value;
+  const description = document.getElementById("descriptionInput").value;
 
-  const finalUrl = myUrl + productId;
-  fetch(finalUrl, {
-    method: 'PUT',
-    headers: myHeaders,
-    body: JSON.stringify(newRecord)
-  })
-  .then(resp => resp.json())
-  .then(data => {
-    product = data;
-    location.href = "home-page.html";
-  })
-  .catch((err) => console.error("Error:", err));
+  if (name && brand && price && imageUrl && description) {
+    const newRecord = {
+      name,
+      brand,
+      price,
+      imageUrl,
+      description
+    };
+
+    const finalUrl = myUrl + productId;
+    fetch(finalUrl, {
+      method: 'PUT',
+      headers: myHeaders,
+      body: JSON.stringify(newRecord)
+    })
+    .then(resp => resp.json())
+    .then(data => {
+      product = data;
+      location.href = "home-page.html";
+    })
+    .catch((err) => console.error("Error:", err));
+  } else {
+    alert("Compila tutti i campi");
+  }
 }
+
 
 //delete
 const deleteProduct = () => {
@@ -115,7 +121,24 @@ const deleteProduct = () => {
   )
 }
 
+//buttons
+const getButtons = () => {
+  const edit = document.getElementById('edit');
+  const deleteButton = document.getElementById('delete');
+  const save = document.getElementById('save');
+
+  if(productId) {
+    edit.style.display = 'block';
+    deleteButton.style.display = 'block';
+    save.style.display = 'none'
+  }else {
+    edit.style.display = 'none';
+    deleteButton.style.display = 'none';
+    save.style.display = 'block'
+  }
+}
+
 window.onload = () => {
-	getProduct();
 	showModifiche();
+  getButtons();
 };
